@@ -10,20 +10,36 @@ window.addEventListener('devicemotion', function(event) {
   console.log(rates);
 if (ratesPrev != null){
   if ((rates.alpha) >= (ratesPrev.alpha)) {
-  	// consoleTextA.innerText = 'SpeedA: ' + Math.abs(Math.round(rates.alpha));
-  	ratesPrev.alpha = rates.alpha;
+    // consoleTextA.innerText = 'SpeedA: ' + Math.abs(Math.round(rates.alpha));
+    ratesPrev.alpha = rates.alpha;
   }
   if ((rates.beta) >= (ratesPrev.beta)) {
-  	// consoleTextB.innerText = 'SpeedB: ' + Math.abs(Math.round(rates.beta));
-  	ratesPrev.beta = rates.beta;
+    // consoleTextB.innerText = 'SpeedB: ' + Math.abs(Math.round(rates.beta));
+    ratesPrev.beta = rates.beta;
   }
   if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-  	consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma)/6) + 'RPM';
-  	ratesPrev.gamma = rates.gamma;
+    consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + 'RPM' + ' ' + gamma;
+    ratesPrev.gamma = rates.gamma;
   }
 
 } else {
-	ratesPrev = rates;
+  ratesPrev = rates;
 }
    
 });
+
+
+  var absolute = null
+  var alpha    = null
+  var beta     = null
+  var gamma    = null
+window.addEventListener("deviceorientation", handleOrientation, true);
+function handleOrientation(event) {
+   absolute = event.absolute;
+   alpha    = event.alpha;
+   beta     = event.beta;
+   gamma    = event.gamma;
+  console.log(gamma);
+
+  // Do stuff with the new orientation data
+}

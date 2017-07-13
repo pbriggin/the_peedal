@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
 				"Lexing",
 				"LexingtonDowntown"
 			],
@@ -14,10 +18,6 @@
 			[
 				"boun",
 				"boundingBoxToLatLng"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"monst",
@@ -463,7 +463,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 747,
+				"buffer_size": 983,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -472,7 +472,16 @@
 			"file": "app/styles.css",
 			"settings":
 			{
-				"buffer_size": 121,
+				"buffer_size": 306,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/main.js",
+			"settings":
+			{
+				"buffer_size": 925,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1122,7 +1131,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1131,15 +1140,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 747,
+						"buffer_size": 983,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								706,
-								706
+								644,
+								644
 							]
 						],
 						"settings":
@@ -1160,21 +1169,50 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 121,
+						"buffer_size": 306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								253,
+								253
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 925,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								846,
+								846
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1761,7 +1799,7 @@
 		[
 			[
 				"",
-				"~/personal-web/freesound-beat-lab/freesound-beat-lab.sublime-project"
+				"~/bootcamp-s17/laravel/time-tracks-V2/time-tracks-V2.sublime-project"
 			]
 		],
 		"width": 380.0
