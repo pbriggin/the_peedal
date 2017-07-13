@@ -1,5 +1,5 @@
-var consoleTextA = $('#consoleTextA')[0];
-var consoleTextB = $('#consoleTextB')[0];
+// var consoleTextA = $('#consoleTextA')[0];
+// var consoleTextB = $('#consoleTextB')[0];
 var consoleTextG = $('#consoleTextG')[0];
 // console.log(consoleTextA);
 var rates = null;
@@ -10,14 +10,14 @@ window.addEventListener('devicemotion', function(event) {
   console.log(rates);
 if (ratesPrev != null){
   if ((rates.alpha) >= (ratesPrev.alpha)) {
-  	consoleTextA.innerText = 'SpeedA: ' + Math.abs(Math.round(rates.alpha));
+  	// consoleTextA.innerText = 'SpeedA: ' + Math.abs(Math.round(rates.alpha));
   	ratesPrev.alpha = rates.alpha;
   }
   if ((rates.beta) >= (ratesPrev.beta)) {
-  	consoleTextB.innerText = 'SpeedB: ' + Math.abs(Math.round(rates.beta));
+  	// consoleTextB.innerText = 'SpeedB: ' + Math.abs(Math.round(rates.beta));
   	ratesPrev.beta = rates.beta;
   }
-  if ((rates.gamma) >= (ratesPrev.gamma)) {
+  if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
   	consoleTextG.innerText = 'SpeedG: ' + Math.abs(Math.round(rates.gamma));
   	ratesPrev.gamma = rates.gamma;
   }

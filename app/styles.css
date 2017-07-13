@@ -9,7 +9,7 @@
 	left: 30%;*/
 }
 
-#consoleTextA {
+/*#consoleTextA {
 	text-align: left;
 	font-size: 80px;
 }
@@ -17,9 +17,12 @@
 #consoleTextB {
 	text-align: left;
 	font-size: 80px;
-}
+}*/
 
 #consoleTextG {
+	position: absolute;
+	top: 50%;
+	left: 30%;
 	text-align: left;
 	font-size: 80px;
 }
