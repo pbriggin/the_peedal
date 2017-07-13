@@ -1,0 +1,14 @@
+.container {
+	height: 100vh;
+	
+}
+
+.row {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#consoleText {
+	text-align: center;
+}
