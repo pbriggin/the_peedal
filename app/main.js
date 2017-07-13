@@ -25,7 +25,10 @@ if (ratesPrev != null){
     ratesPrev.gamma = rates.gamma;
   }
   consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + alpha;
-  consoleTextGRot.rotate(alpha);
+  if (alpha != null) {
+      consoleTextGRot.rotate(alpha);
+      console.log(alpha);
+  }
 } else {
   ratesPrev = rates;
 }
