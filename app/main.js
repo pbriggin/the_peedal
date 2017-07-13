@@ -30,7 +30,7 @@ window.addEventListener('devicemotion', function(event) {
     consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
     if (alpha != null) {
         var alphaOff = alphaOffset.val()
-        consoleTextGRot.rotate(alpha + alphaOff);
+        consoleTextGRot.rotate(alpha);
         console.log(alphaOff);
         console.log(alpha);
     }
