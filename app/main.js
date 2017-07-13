@@ -21,10 +21,10 @@ if (ratesPrev != null){
     ratesPrev.beta = rates.beta;
   }
   if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-    consoleTextGHi.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM';
+    consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
     ratesPrev.gamma = rates.gamma;
   }
-  consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + alpha;
+  consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + Math.round(alpha);
   if (alpha != null) {
       consoleTextGRot.rotate(alpha);
       console.log(alpha);
