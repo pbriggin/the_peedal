@@ -18,7 +18,7 @@ if (ratesPrev != null){
   	ratesPrev.beta = rates.beta;
   }
   if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-  	consoleTextG.innerText = 'SpeedG: ' + Math.abs(Math.round(rates.gamma));
+  	consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma)/6) + 'RPM';
   	ratesPrev.gamma = rates.gamma;
   }
 
