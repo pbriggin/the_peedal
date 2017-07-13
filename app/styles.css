@@ -4,12 +4,22 @@
 }
 
 .row {
-	position: absolute;
-	top: 50%;
-	left: 30%;
+	/*position: absolute;
+	top: 15%;
+	left: 30%;*/
 }
 
-#consoleText {
+#consoleTextA {
+	text-align: left;
+	font-size: 80px;
+}
+
+#consoleTextB {
+	text-align: left;
+	font-size: 80px;
+}
+
+#consoleTextG {
 	text-align: left;
 	font-size: 80px;
 }
