@@ -29,10 +29,12 @@ window.addEventListener('devicemotion', function(event) {
     }
     consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
     if (alpha != null) {
-        consoleTextGRot.rotate(alpha + alphaOffset.val());
-        console.log(alphaOffset.val());
+        var alphaOff = alphaOffset.val()
+        consoleTextGRot.rotate(alpha + alphaOff);
+        console.log(alphaOff);
         console.log(alpha);
     }
+    // console.log(alphaOff);
   } else {
     ratesPrev = rates;
   }
