@@ -1,8 +1,9 @@
 // var consoleTextA = $('#consoleTextA')[0];
 // var consoleTextB = $('#consoleTextB')[0];
+var consoleTextGRot = $('#consoleTextG');
 var consoleTextG = $('#consoleTextG')[0];
 var consoleTextGHi = $('#consoleTextGHi')[0];
-// console.log(consoleTextA);
+console.log(consoleTextG);
 var rates = null;
 var ratesPrev = null;
 window.addEventListener('devicemotion', function(event) {
@@ -24,6 +25,7 @@ if (ratesPrev != null){
     ratesPrev.gamma = rates.gamma;
   }
   consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + alpha;
+  consoleTextGRot.rotate(alpha);
 } else {
   ratesPrev = rates;
 }
