@@ -9,6 +9,8 @@ window.addEventListener('devicemotion', function(event) {
 if (ratesPrev != null){
   if ((rates.alpha) > (ratesPrev.alpha)) {
   	consoleText.innerText = 'Speed: ' + Math.abs(Math.round(rates.alpha));
+  } else {
+  	consoleText.innerText = 'PrevSpeed: ' + Math.abs(Math.round(ratesPrev.alpha));
   }
 }
    ratesPrev = rates;
