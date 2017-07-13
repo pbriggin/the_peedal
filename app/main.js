@@ -23,7 +23,7 @@ if (ratesPrev != null){
     consoleTextGHi.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM';
     ratesPrev.gamma = rates.gamma;
   }
-  consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + gamma;
+  consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + alpha;
 } else {
   ratesPrev = rates;
 }
