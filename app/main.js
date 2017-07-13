@@ -3,43 +3,48 @@
 var consoleTextGRot = $('#consoleTextG');
 var consoleTextG = $('#consoleTextG')[0];
 var consoleTextGHi = $('#consoleTextGHi')[0];
-console.log(consoleTextG);
+
+//Grab alpha offset from slider
+var alphaOffset = $('#alphaOffset');
+console.log(alphaOffset);
+
 var rates = null;
 var ratesPrev = null;
+
 window.addEventListener('devicemotion', function(event) {
   // console.log(event.acceleration.x + ' m/s2');
-  console.log(event);
   rates = event.rotationRate;
-  console.log(rates);
-if (ratesPrev != null){
-  if ((rates.alpha) >= (ratesPrev.alpha)) {
-    // consoleTextA.innerText = 'SpeedA: ' + Math.abs(Math.round(rates.alpha));
-    ratesPrev.alpha = rates.alpha;
+  if (ratesPrev != null){
+    if ((rates.alpha) >= (ratesPrev.alpha)) {
+      // consoleTextA.innerText = 'SpeedA: ' + Math.abs(Math.round(rates.alpha));
+      ratesPrev.alpha = rates.alpha;
+    }
+    if ((rates.beta) >= (ratesPrev.beta)) {
+      // consoleTextB.innerText = 'SpeedB: ' + Math.abs(Math.round(rates.beta));
+      ratesPrev.beta = rates.beta;
+    }
+    if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
+      consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
+      ratesPrev.gamma = rates.gamma;
+    }
+    consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
+    if (alpha != null) {
+        consoleTextGRot.rotate(alpha + alphaOffset.val());
+        console.log(alphaOffset.val());
+        console.log(alpha);
+    }
+  } else {
+    ratesPrev = rates;
   }
-  if ((rates.beta) >= (ratesPrev.beta)) {
-    // consoleTextB.innerText = 'SpeedB: ' + Math.abs(Math.round(rates.beta));
-    ratesPrev.beta = rates.beta;
-  }
-  if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-    consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
-    ratesPrev.gamma = rates.gamma;
-  }
-  consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
-  if (alpha != null) {
-      consoleTextGRot.rotate(alpha + 90);
-      console.log(alpha);
-  }
-} else {
-  ratesPrev = rates;
-}
    
 });
 
 
-  var absolute = null
-  var alpha    = null
-  var beta     = null
-  var gamma    = null
+var absolute = null
+var alpha    = null
+var beta     = null
+var gamma    = null
+
 window.addEventListener("deviceorientation", handleOrientation, true);
 function handleOrientation(event) {
    absolute = event.absolute;
