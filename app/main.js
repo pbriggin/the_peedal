@@ -24,9 +24,9 @@ if (ratesPrev != null){
     consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
     ratesPrev.gamma = rates.gamma;
   }
-  consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + Math.round(alpha);
+  consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
   if (alpha != null) {
-      consoleTextGRot.rotate(alpha);
+      consoleTextGRot.rotate(alpha + 90);
       console.log(alpha);
   }
 } else {
