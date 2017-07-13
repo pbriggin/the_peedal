@@ -28,6 +28,10 @@
 	position: absolute;
 	top: 50%;
 	left: 30%;
+	
+}
+
+.console {
 	text-align: left;
 	font-size: 80px;
 }

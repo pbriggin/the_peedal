@@ -1,11 +1,13 @@
 // var consoleTextA = $('#consoleTextA')[0];
 // var consoleTextB = $('#consoleTextB')[0];
 var consoleTextG = $('#consoleTextG')[0];
+var consoleTextGHi = $('#consoleTextGHi')[0];
 // console.log(consoleTextA);
 var rates = null;
 var ratesPrev = null;
 window.addEventListener('devicemotion', function(event) {
   // console.log(event.acceleration.x + ' m/s2');
+  console.log(event);
   rates = event.rotationRate;
   console.log(rates);
 if (ratesPrev != null){
@@ -18,10 +20,10 @@ if (ratesPrev != null){
     ratesPrev.beta = rates.beta;
   }
   if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-    consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + 'RPM' + ' ' + gamma;
+    consoleTextGHi.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM';
     ratesPrev.gamma = rates.gamma;
   }
-
+  consoleTextG.innerText = 'Speed: ' + Math.abs(Math.round(rates.gamma/6)) + ' RPM' + ' ' + gamma;
 } else {
   ratesPrev = rates;
 }
@@ -40,6 +42,7 @@ function handleOrientation(event) {
    beta     = event.beta;
    gamma    = event.gamma;
   console.log(gamma);
+  console.log(event);
 
   // Do stuff with the new orientation data
 }
