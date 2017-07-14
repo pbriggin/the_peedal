@@ -27,7 +27,7 @@ window.addEventListener('devicemotion', function(event) {
       consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
       ratesPrev.gamma = rates.gamma;
     }
-    consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
+    // consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
     if (alpha != null) {
         var alphaOff = alphaOffset.val()
         consoleTextGRot.rotate(alpha);
