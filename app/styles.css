@@ -32,6 +32,7 @@
     left: 50%;
     margin-left: -300px; /* margin is -0.5 * dimension */
     margin-top: -50px; 
+    transform-origin: 50% 50%;
 	
 }
 
