@@ -3,6 +3,8 @@
 var consoleTextGRot = $('#consoleTextG');
 var consoleTextG = $('#consoleTextG')[0];
 var consoleTextGHi = $('#consoleTextGHi')[0];
+var consoleTextAccHi = $('#consoleTextAccHi')[0];
+
 
 //Grab alpha offset from slider
 var alphaOffset = $('#alphaOffset');
@@ -17,11 +19,12 @@ window.addEventListener('devicemotion', function(event) {
   acc = event.acceleration;
   if (ratesPrev != null){
     if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-      consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
+      // consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
+      consoleTextGHi.innerText = Math.abs(Math.round(acc.x / 9.81)) + ' Gs';
       ratesPrev.gamma = rates.gamma;
     }
     // consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
-    consoleTextG.innerText = Math.abs(Math.round(acc.x * 60)) + ' m/s';
+    consoleTextG.innerText = Math.abs(Math.round(acc.x / 9.81)) + ' Gs';
     if (alpha != null) {
         var alphaOff = alphaOffset.val()
         consoleTextGRot.rotate(alpha);
