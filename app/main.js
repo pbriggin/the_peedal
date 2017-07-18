@@ -12,6 +12,8 @@ console.log(alphaOffset);
 
 var rates = null;
 var ratesPrev = null;
+var acc = null;
+var accPrev = null;
 
 window.addEventListener('devicemotion', function(event) {
   // console.log(event.acceleration.x + ' m/s2');
@@ -20,10 +22,13 @@ window.addEventListener('devicemotion', function(event) {
   if (ratesPrev != null){
     if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
       consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
-      consoleTextAccHi.innerText = Math.abs(Math.round(acc.x / 9.81)) + ' Gs';
       ratesPrev.gamma = rates.gamma;
     }
     // consoleTextG.innerText = Math.abs(Math.round(rates.gamma/6));
+    if (Math.abs(acc.x) >= Math.abs(accPrev.x)) {
+      consoleTextAccHi.innerText = Math.abs(Math.round(acc.x / 9.81)) + ' Gs';
+      accPrev.x = acc.x;
+    }
     consoleTextG.innerText = Math.abs(Math.round((acc.x / 9.81) * 10)/10) + ' Gs';
     if (alpha != null) {
         var alphaOff = alphaOffset.val()
@@ -33,6 +38,7 @@ window.addEventListener('devicemotion', function(event) {
     }
   } else {
     ratesPrev = rates;
+    accPrev = acc;
   }
    
 });
