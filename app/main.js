@@ -44,7 +44,6 @@ window.addEventListener('devicemotion', function(event) {
 
   } else {
     ratesPrev = rates;
-    accPrev = acc;
   }
 
 // Handling the accelerometer data
@@ -63,7 +62,8 @@ window.addEventListener('devicemotion', function(event) {
 
   // Handle DOM orientation
   if (alpha != null) {
-      consoleTextG.rotate(alpha);
+      // this div is not currently in use
+      // consoleTextG.rotate(alpha);
       consoleTextAcc.rotate(alpha);
   }
 });
