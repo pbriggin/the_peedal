@@ -40,7 +40,9 @@ window.addEventListener('devicemotion', function(event) {
       ratesPrev.gamma = rates.gamma;
     }
 
-    consoleTextG[0].innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPMs';
+    if (consoleTextG[0]) {
+      consoleTextG[0].innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPMs';
+    }
 
   } else {
     ratesPrev = rates;
@@ -54,7 +56,9 @@ window.addEventListener('devicemotion', function(event) {
       accPrev.x = acc.x;
     }
 
-    consoleTextAcc[0].innerText = Math.abs(Math.round((acc.x / 9.81) * 10)/10) + ' Gs';
+    if (consoleTextAcc[0]) {
+      consoleTextAcc[0].innerText = Math.abs(Math.round((acc.x / 9.81) * 10)/10) + ' Gs';
+    }
 
   } else {
     accPrev = acc;
@@ -62,9 +66,13 @@ window.addEventListener('devicemotion', function(event) {
 
   // Handle DOM orientation
   if (alpha != null) {
-      // this div is not currently in use
-      // consoleTextG.rotate(alpha);
+    if (consoleTextG[0]) { //check for corresponding DOM element
+      consoleTextG.rotate(alpha);
+    }
+
+    if (consoleTextAcc[0]) { //check for corresponding DOM element
       consoleTextAcc.rotate(alpha);
+    }
   }
 });
 
