@@ -36,6 +36,18 @@
 	
 }
 
+#consoleTextAcc {
+	position: absolute;
+    width: 600px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px; /* margin is -0.5 * dimension */
+    margin-top: -50px; 
+    transform-origin: 50% 0%;
+	
+}
+
 .console {
 	text-align: center;
 	font-size: 80px;
