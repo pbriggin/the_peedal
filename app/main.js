@@ -34,22 +34,27 @@ window.addEventListener('devicemotion', function(event) {
   acc = event.acceleration; // returns as meters per second^2
 
 // Handiling the gyroscopic data
-  if (ratesPrev != null){
-    if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) {
-      consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM';
-      ratesPrev.gamma = rates.gamma;
+  if (ratesPrev != null){ // check for previous motion
+
+    // we use the gamma axis for rotation
+
+    if (Math.abs(rates.gamma) >= Math.abs(ratesPrev.gamma)) { // If current rate is greater than the previous rate
+      consoleTextGHi.innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPM'; // update the DOM text to highest rpm 
+      ratesPrev.gamma = rates.gamma; // then set previous rate to current rate
     }
 
-    if (consoleTextG[0]) {
-      consoleTextG[0].innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPMs';
+    if (consoleTextG[0]) { // check for corresponding DOM element
+      consoleTextG[0].innerText = Math.abs(Math.round(rates.gamma/6)) + ' RPMs'; // refresh current rate 
     }
 
   } else {
-    ratesPrev = rates;
+    ratesPrev = rates; // if there has been np motion recorded yet, set it now
   }
 
 // Handling the accelerometer data
-  if (accPrev != null){
+  if (accPrev != null){ // check for previous motion
+
+    // we use the x axis for acceration
 
     if (Math.abs(acc.x) >= Math.abs(accPrev.x)) {
       consoleTextAccHi.innerText = Math.abs(Math.round(acc.x / 9.81)) + ' Gs';
@@ -66,11 +71,12 @@ window.addEventListener('devicemotion', function(event) {
 
   // Handle DOM orientation
   if (alpha != null) {
-    if (consoleTextG[0]) { //check for corresponding DOM element
+
+    if (consoleTextG[0]) { //check for corresponding DOM element (#consoleTextG)
       consoleTextG.rotate(alpha);
     }
 
-    if (consoleTextAcc[0]) { //check for corresponding DOM element
+    if (consoleTextAcc[0]) { //check for corresponding DOM element (#consoleTextAcc)
       consoleTextAcc.rotate(alpha);
     }
   }
