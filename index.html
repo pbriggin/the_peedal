@@ -53,6 +53,7 @@
 </body>
 <!-- <script src="./app/main.js"></script> -->
 <script>
+  screen.width < 600 ? $('.logo-side').hide() : $('.logo-side').show();
   $(window).resize(function() {
     screen.width < 600 ? $('.logo-side').hide() : $('.logo-side').show();
   });
