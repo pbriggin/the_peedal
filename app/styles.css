@@ -4,7 +4,7 @@ body {
   -moz-background-size: 100vh;
   -o-background-size: 100vh;
   background-size: 100vh;*/
-  background-color: #27aae1;
+  /*background-color: #27aae1;*/
 }
 
 hr {
@@ -57,7 +57,7 @@ iframe[seamless]{
 }
 
 .btn-paypal {
-  padding: 20px;
+  border-radius: 10px;
 }
 
 #consoleTextG {
