@@ -11,7 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" href="./app/styles.css">
-	<title>Speed Spin</title>
+    <link rel="shortcut icon" href="SpinnyTopLogoBlue.png" />
+	<title>SpinnyTop.US</title>
 </head>
 <body>
 	<div class="container-flow">
@@ -20,6 +21,7 @@
         <div class="logo">
           <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo" height="100px">
         </div>
+        <div class="total-rotations-result pink-text">Loading Rotations...</div>
       </div>
       <div class="col s12 m8">
 
@@ -29,6 +31,7 @@
       <div class="col s12 m4 center-align side-menu">
         <div class="logo logo-side">
           <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo" height="200px">
+          <div class="total-rotations-result pink-text">Loading Rotations...</div>
         </div>
           <p class="flow-text">Made in USA</p>
           <hr>
@@ -45,7 +48,7 @@
           <p class="flow-text">Free Shipping</p>
           <hr>
           <p class="flow-text">Check out our sweet app:</p>
-          <a href="#">
+          <a href="https://itunes.apple.com/us/app/spinnytop-us/id1325753244?mt=8">
             <img src="./app/app_store_badge.png" alt="Link to App Store" width="200px">
           </a>
       </div>
@@ -57,6 +60,19 @@
   screen.width < 600 ? $('.logo-side').hide() : $('.logo-side').show();
   $(window).resize(function() {
     screen.width < 600 ? $('.logo-side').hide() : $('.logo-side').show();
+  });
+
+  let data;
+  $.ajax({
+    // url: "http://localhost:8000/api/spins/jsonp-aggregates/",
+    url: "https://spinny-top.herokuapp.com/api/spins/jsonp-aggregates/",
+    data: data,
+    success: function( data ) {
+      $( ".total-rotations-result" ).html( "<h3>" + data.total_rotations + "</h3>"
+        + 'Lifetime Rotations </br>'
+      );
+    },
+    dataType: 'jsonp'
   });
 </script>
 </html>
