@@ -1,0 +1,142 @@
+/*
+main-color-light:#fffcf5;
+main-color-dark:#66625b;
+*/
+
+body {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  height: 80vh;
+  background-color: #66625b;
+}
+
+.section-text {
+  margin: 0% 15%;
+}
+
+.section-header {
+  font-size: 180%;
+  font-weight: bold;
+}
+
+.section-paragraph {
+  font-weight: 100;
+}
+
+section.landing {
+  background: linear-gradient(
+      rgba(255, 252, 245, 0.85),
+      rgba(255, 252, 245, 0.85)
+    ), url(../images/wall.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+
+  color: #66625b;
+}
+
+.landing-text {
+  position: relative;
+  top: 20%;
+  left: 10%;
+}
+
+.landing-header {
+  font-size: 180%;
+  font-weight: bold;
+}
+
+.landing-paragraph {
+  font-size: 160%;
+  font-weight: 100;
+  text-transform: uppercase;
+  display: block;
+  width: 60%;
+}
+
+.landing form {
+  position: relative;
+  top: 24%;
+  left: 10%;
+}
+
+.landing svg {
+  vertical-align: middle
+}
+
+section.quote {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ), url(../images/coffee.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: #fffcf5;
+}
+
+.features {
+  min-height: 80vh;
+  background-color: #66625b;
+  color: #fffcf5;
+  margin-bottom: -5%;
+}
+
+.feature-text {
+  /* margin: 0% 15%; */
+}
+
+.feature-header {
+  font-size: 180%;
+  font-weight: bold;
+}
+
+.feature-paragraph {
+  font-weight: 100;
+}
+
+#video-link {
+  font-weight: 100;
+  color: #66625b;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+nav {
+  background-color: #fffcf5;
+}
+
+nav a {
+  color: #66625b;
+}
+
+nav ul a {
+  color: #66625b;
+}
+
+.sidenav {
+  background-color: #fffcf5;
+}
+
+.sidenav a {
+  color: #66625b;
+}
+
+.nav-wrapper {
+  margin: 0% 5%;
+}
+
+.nav-wrapper .brand-logo img {
+  max-height: 50px;
+  width: auto;
+  margin-top: 10%;
+}
