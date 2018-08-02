@@ -19,7 +19,7 @@ section {
 }
 
 .section-light {
-  /* box-shadow: 0px 100px 100px 0px hsl(42, 90%, 92%) inset; */
+  box-shadow: 0px 66px 68px -10px hsl(36, 5%, 64%) inset;
   background-color: #fffcf5;
 }
 
@@ -39,8 +39,8 @@ section {
 section.landing {
   background: linear-gradient(
       rgba(255, 252, 245, 0.85),
-      rgba(255, 252, 245, 0.85)
-    ), url(../images/wall.jpg) no-repeat center center;
+      rgba(255, 252, 245, 0.55)
+    ), url(../images/sky_shot.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -83,7 +83,7 @@ section.quote {
   background: linear-gradient(
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
-    ), url(../images/coffee.jpg) no-repeat center center;
+    ), url(../images/street_shot.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -108,7 +108,7 @@ section.quote {
 }
 
 .feature-text {
-  max-width: 20vw;
+  max-width: 35vw;
 }
 
 .feature-header {
@@ -151,7 +151,7 @@ section.quote {
   background: linear-gradient(
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
-    ), url(../images/products/peter-packages.png) no-repeat center center;
+    ), url(../images/buy.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -171,7 +171,7 @@ section.quote {
   font-weight: 100;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1068px) {
   #iphone-img {
     position: relative;
     left: -20vw;
@@ -197,7 +197,7 @@ section.quote {
 #btn-app-download {
   /* position: relative;
   top: 10vh; */
-  margin-top: 8%;
+  margin-top: 15px;
 }
 
 nav {

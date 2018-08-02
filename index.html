@@ -13,90 +13,233 @@
 
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <!-- JQuery 3.2.1 -->
+	  <!-- JQuery 3.2.1 -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script> -->
 	  <script src="./app/jquery-rotate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollfire/1.4.0/jquery.scrollfire.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed" rel="stylesheet">
+    <!-- AOS scroll animations -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <!-- Using Google's Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./app/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./app/styles_53.css">
     <link rel="shortcut icon" href="SpinnyTopLogoBlue.png" />
 	<title>SpinnyTop.US</title>
 </head>
-<body>
 
-	<div class="container-flow">
-		<div class="row">
-      <div class="col s12 center-align logo-top-container">
-        <div class="logo">
-          <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo" height="100px">
-        </div>
-        <div class="total-rotations-result grey-text ">Loading Rotations...</div>
+<body>
+  <!-- BEGIN NAV -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="left brand-logo">
+        <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo">
+      </a>
+      <a href="#" data-target="mobile-navbar" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="badges.html"><i class="fab fa-twitter fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/spinnytop/"><i class="fab fa-instagram fa-2x"></i></a></li>
+        <li><a class="waves-effect waves-light btn red" href="https://itunes.apple.com/us/app/spinnytop-us/id1325753244?mt=8">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-navbar">
+    <li><a href="badges.html">Twitter</a></li>
+    <li><a href="https://www.instagram.com/spinnytop/">Instagram</a></li>
+    <li><a class="waves-effect waves-light btn red" href="https://itunes.apple.com/us/app/spinnytop-us/id1325753244?mt=8">Download</a></li>
+  </ul>
+  <!-- END NAV -->
+  <div class="container-flow">
+    <section class="landing">
+      <div class="landing-text">
+        <span class="landing-header">Spinny Top</span>
         <br>
+        <span class="landing-paragraph">A cell phone fidget tool</span>
+      </div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="2XTXAVS8A4GCJ">
+        <button class="flow-text red btn btn-large btn-paypal"><strong>Buy with &nbsp <i class="fab fa-cc-paypal fa-2x"></i></strong></button>
+      </form>
+      <!-- Modal Trigger -->
+      <a id="video-link" class="waves-effect waves-light modal-trigger" href="#modal-video">Watch Video <i class="material-icons">play_arrow</i></a>
+
+      <!-- Modal Structure -->
+      <div id="modal-video" class="modal">
+        <div class="modal-content">
+          <div class="video-container">
+            <iframe height="480" src="https://www.youtube.com/embed/wjPEUo2jUnE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <br>
+      <div class="section-text">
+        <span class="center section-header">FOCUS-PLAY-ENTERTAIN</span>
+        <p class="section-paragraph flow-text">
+          Spinny top is the perfect no-bulk option for your fidgeting needs.
+          Plus through our unique app integration, you can track your spin stats, which you can use to compete with users around the globe.
+          Oh, did we mention it will make you the life of the party? Just turn on the video player mode and give that phone a spin.
+          We can’t promise it will make Phil dance, but we’re not saying it won’t either.
+        </p>
+      </div>
+    </section>
+
+    <div class="features section-dark">
+      <div class="section-text">
+        <span class="center section-header">Features</span>
+        <p class="section-paragraph flow-text">
+          We’ve thought of everything in our patent-pending design to make sure this is the raddest thing you’ve ever done with your phone. Check it out:
+        </p>
+      </div>
+      <div class="row feature">
+        <div class="col s4 feature-pic center" data-aos="fade-right">
+          <img id="iphone-img" src="./images/products/iphone.png" alt="">
+        </div>
+        <div class="col s8 feature-text" data-aos="fade-up">
+          <div class="feature-header">
+            Any Case
+          </div>
+          <div class="feature-paragraph">
+            Works on almost any phone case.
+          </div>
+        </div>
+      </div>
+      <div class="row feature">
+        <div class="col s4 feature-pic center" data-aos="fade-right">
+          <img id="spinny-template" src="./images/products/spinny_template.png" alt="">
+        </div>
+        <div class="col s8 feature-text" data-aos="fade-up">
+          <div class="feature-header">
+            Quick-Start Guide
+          </div>
+          <div class="feature-paragraph">
+            Our patent-pending Centering-Guide comes with every SpinnyTop and is optimized for iPhone, and works with most other devices. Just use the guides shown to optically center the top on your phone and and VOILA. You’re ready to spin like a champ.
+          </div>
+        </div>
+      </div>
+      <div class="row feature">
+        <div class="col s4 feature-pic center" data-aos="fade-right">
+          3M <i class="fas fa-tape fa-4x"></i>
+        </div>
+        <div class="col s8 feature-text" data-aos="fade-up">
+          <div class="feature-header">
+            The Tape
+          </div>
+          <div class="feature-paragraph">
+            3M Sticky for the strongest bond, removable whenever you like.
+          </div>
+        </div>
+      </div>
+      <div class="row feature">
+        <div class="col s4 feature-pic center" data-aos="fade-right">
+          <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo" height="75px">
+        </div>
+        <div class="col s8 feature-text" data-aos="fade-up">
+          <div class="feature-header">
+            The Top
+          </div>
+          <div class="feature-paragraph">
+            All tops are 3-D Printed right here in the good ole USA. We’ve tested dozens of designs and sizes to make sure you get the maximum spin with the lowest profile which means no bulk when you squeeze your phone back into your skinny jeans.
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <section class="app section-light">
+      <div class="section-text center">
+        <span class="center section-header">Download the App!</span>
+      </div>
+      <div class="row center">
+        <div class="flow-text">
+          Track and animate every spin with our groundbreaking iOS app.
+        </div>
+      </div>
+      <div class="row center">
+        <a id="btn-app-download" class="waves-effect waves-light btn red" href="https://itunes.apple.com/us/app/spinnytop-us/id1325753244?mt=8">Download</a>
+      </div>
+      <div class="row center">
+        <div class="col s6">
+          <p class="flow-text">Keep Track of Spins</p>
+          <img class="app-img" src="./images/products/app-img-1.jpg" alt="">
+        </div>
+        <div class="col s6">
+          <p class="flow-text">Compete in the Leaderboards</p>
+          <img class="app-img" src="./images/products/app-img-1.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="buy section-dark center">
+      <div class="buy-container">
+        <span class="buy-text flow-text">Available for purchase with PayPal</span>
+        <h2 class="buy-price">$5</h2>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <!-- <div class="pink btn btn-large"> -->
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="2XTXAVS8A4GCJ">
-          <!-- <input type="button" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> -->
-          <button class="flow-text pink btn btn-flat white-text btn-paypal"><strong>Buy Now</strong></button>
-          <!-- <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
-          <!-- </div> -->
+          <button class="flow-text red btn btn-large btn-paypal"><strong>Buy with &nbsp <i class="fab fa-cc-paypal fa-2x"></i></strong></button>
         </form>
-        <br>
       </div>
-      <div class="col s12 m8">
+    </section>
 
-      <iframe seamless="seamless" id="spinny-video" width="560" height="315" src="https://www.youtube.com/embed/wjPEUo2jUnE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-      </div>
-      <div class="col s12 m4 center-align side-menu">
-        <div class="logo logo-side">
-          <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo" height="200px">
-          <div class="total-rotations-result pink-text">Loading Rotations...</div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row center">
+            <a href="badges.html"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/spinnytop/"><i class="fab fa-instagram fa-2x"></i></a>
         </div>
-          <p class="flow-text">Made in USA</p>
-          <hr>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <!-- <div class="pink btn btn-large"> -->
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="2XTXAVS8A4GCJ">
-              <!-- <input type="button" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> -->
-              <button class="flow-text pink btn btn-large btn-paypal"><strong>Buy Now</strong></button>
-              <!-- <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
-            <!-- </div> -->
-          </form>
-          <p class="flow-text"><strong>$5</strong></p>
-          <p class="flow-text">Free Shipping</p>
-          <hr>
-          <p class="flow-text">Check out our sweet app:</p>
-          <a href="https://itunes.apple.com/us/app/spinnytop-us/id1325753244?mt=8">
-            <img src="./app/app_store_badge.png" alt="Link to App Store" width="200px">
-          </a>
-          <hr>
-          <a href="./privacy_policy.html">Privacy Policy</a>
       </div>
-		</div>
-	</div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2018 SpinnyTop | <a href="./privacy_policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
 </body>
-<!-- <script src="./app/main.js"></script> -->
+
 <script>
-  screen.width < 600 ? $('.logo-side').hide() : $('.logo-side').show();
-  $(window).resize(function() {
-    screen.width < 600 ? $('.logo-side').hide() : $('.logo-side').show();
+  AOS.init();
+</script>
+
+<script> // Materialze initializations
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.modal').modal();
+
   });
 
-  let data;
-  $.ajax({
-    // url: "http://localhost:8000/api/spins/jsonp-aggregates/",
-    url: "https://spinny-top.herokuapp.com/api/spins/jsonp-aggregates/",
-    data: data,
-    success: function( data ) {
-      $( ".total-rotations-result" ).html( "<h3>" + data.total_rotations + "</h3>"
-        + 'Lifetime Rotations </br>'
-      );
-    },
-    dataType: 'jsonp'
-  });
+</script>
+
+<script type="text/javascript">
+  /* quotes
+    - Track your speed and other competitive analytics
+  */
+</script>
+
+<script> // Getting Rorations from Heroku App
+  // let data;
+  // $.ajax({
+  //   // url: "http://localhost:8000/api/spins/jsonp-aggregates/",
+  //   url: "https://spinny-top.herokuapp.com/api/spins/jsonp-aggregates/",
+  //   data: data,
+  //   success: function( data ) {
+  //     $( ".total-rotations-result" ).html( "<h3>" + data.total_rotations + "</h3>"
+  //       + 'Lifetime Rotations </br>'
+  //     );
+  //   },
+  //   dataType: 'jsonp'
+  // });
 </script>
 </html>
