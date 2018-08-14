@@ -28,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./app/styles_53.css">
     <link rel="shortcut icon" href="SpinnyTopLogoBlue.png" />
-	<title>SpinnyTop.US</title>
+	<title>SpinnyTop</title>
 </head>
 
 <body>
@@ -60,11 +60,14 @@
         <br>
         <span class="landing-paragraph">A cell phone fidget tool</span>
       </div>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="2XTXAVS8A4GCJ">
         <button class="flow-text red btn btn-large btn-paypal"><strong>Buy with &nbsp <i class="fab fa-cc-paypal fa-2x"></i></strong></button>
-      </form>
+      </form> -->
+      <div class="button-div">
+        <button onclick="var elmnt = document.getElementById('buy-container'); elmnt.scrollIntoView({ block: 'start',  behavior: 'smooth' });" class="flow-text red btn btn-large btn-paypal"><strong>Buy with &nbsp <i class="fab fa-cc-paypal fa-2x"></i></strong></button>
+      </div>
       <!-- Modal Trigger -->
       <a id="video-link" class="waves-effect waves-light modal-trigger" href="#modal-video">Watch Video <i class="material-icons">play_arrow</i></a>
 
@@ -85,8 +88,6 @@
         <p class="section-paragraph flow-text">
           Spinny top is the perfect no-bulk option for your fidgeting needs.
           Plus through our unique app integration, you can track your spin stats, which you can use to compete with users around the globe.
-          Oh, did we mention it will make you the life of the party? Just turn on the video player mode and give that phone a spin.
-          We can’t promise it will make Phil dance, but we’re not saying it won’t either.
         </p>
       </div>
     </section>
@@ -126,7 +127,8 @@
       </div>
       <div class="row feature">
         <div class="col s4 feature-pic center" data-aos="fade-right">
-          3M <i class="fas fa-tape fa-4x"></i>
+          <!-- 3M <i class="fas fa-tape fa-4x"></i> -->
+          <img src="./images/products/tape.png" alt="3M Tape" height="75px">
         </div>
         <div class="col s8 feature-text" data-aos="fade-up">
           <div class="feature-header">
@@ -139,7 +141,7 @@
       </div>
       <div class="row feature">
         <div class="col s4 feature-pic center" data-aos="fade-right">
-          <img src="SpinnyTopLogoBlue.png" alt="Spinny Top Logo" height="75px">
+          <img src="./images/products/top.png" alt="Spinny Top Logo" height="75px">
         </div>
         <div class="col s8 feature-text" data-aos="fade-up">
           <div class="feature-header">
@@ -180,12 +182,27 @@
     </section>
 
     <section class="buy section-dark center">
-      <div class="buy-container">
-        <span class="buy-text flow-text">Available for purchase with PayPal</span>
-        <h2 class="buy-price">$5</h2>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <div class="buy-container" id="buy-container">
+        <!-- <span class="buy-text flow-text">Select a Top</span> -->
+        <!-- <h2 class="buy-price">$5</h2> -->
+        <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="2XTXAVS8A4GCJ">
+          <button class="flow-text red btn btn-large btn-paypal"><strong>Buy with &nbsp <i class="fab fa-cc-paypal fa-2x"></i></strong></button>
+        </form> -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="form-buy">
+          <span class="buy-price">Select a Top</span>
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="8UDYMH8C7GL52">
+          <input type="hidden" name="on0" value="Type">
+          <select name="os0">
+              <option value="Black Acryllic">Black Acryllic $5.00 USD</option>
+              <option value="Blue PLA">Blue PLA $5.00 USD</option>
+              <option value="Maple">Maple $10.00 USD</option>
+              <option value="Aluminum">Aluminum $10.00 USD</option>
+            </select>
+          </table>
+          <input type="hidden" name="currency_code" value="USD">
           <button class="flow-text red btn btn-large btn-paypal"><strong>Buy with &nbsp <i class="fab fa-cc-paypal fa-2x"></i></strong></button>
         </form>
       </div>
@@ -217,7 +234,7 @@
   $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.modal').modal();
-
+    $('select').formSelect();
   });
 
 </script>
