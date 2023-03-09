@@ -11,7 +11,7 @@
 
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gotham Rounded Book", sans-serif;
   color: #444444;
 }
 
@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Gotham Rounded Book", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -90,7 +90,7 @@ h6 {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 2px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Gotham Rounded Book", sans-serif;
 }
 
 #header .logo a {
@@ -136,7 +136,7 @@ h6 {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 15px;
-  color: #407f9f;
+  color: #5CB7E4;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -239,7 +239,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #407f9f;
+  color: #5CB7E4;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -296,7 +296,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #407f9f;
+  color: #5CB7E4;
 }
 
 .navbar-mobile a:hover,
@@ -361,10 +361,10 @@ h6 {
 #hero h1 {
   margin: 0;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 56px;
-  color: #407f9f;
-  font-family: "Poppins", sans-serif;
+  color: #5CB7E4;
+  font-family: "Gotham Rounded Book", sans-serif;
 }
 
 #hero h2 {
@@ -393,7 +393,7 @@ h6 {
 
 #hero .btn-get-started,
 #hero .btn-get-quote {
-  font-family: "Poppins", sans-serif;
+  font-family: "Gotham Rounded Book", sans-serif;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.5px;
@@ -505,7 +505,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #407f9f;
+  color: #5CB7E4;
 }
 
 .section-title h2::after {
@@ -531,7 +531,7 @@ section {
   font-size: 44px;
   line-height: 50px;
   margin-bottom: 20px;
-  color: #407f9f;
+  color: #5CB7E4;
 }
 
 .about .content h3 {
@@ -587,7 +587,7 @@ section {
   font-weight: 600;
   padding: 0;
   margin: 20px 0;
-  color: #407f9f;
+  color: #5CB7E4;
 }
 
 .why-us .box p {
@@ -700,7 +700,7 @@ section {
 }
 
 .services .icon-box h4 a {
-  color: #407f9f;
+  color: #5CB7E4;
   transition: ease-in-out 0.3s;
 }
 
@@ -793,7 +793,7 @@ section {
 }
 
 .features .icon-box h3 a {
-  color: #407f9f;
+  color: #5CB7E4;
   transition: ease-in-out 0.3s;
 }
 
@@ -905,12 +905,12 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #407f9f;
+  color: #5CB7E4;
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #407f9f;
+  color: #5CB7E4;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -1052,7 +1052,7 @@ section {
 
 .team .member .social a {
   transition: color 0.3s;
-  color: #407f9f;
+  color: #5CB7E4;
   margin: 0 10px;
   padding-top: 8px;
   display: inline-block;
@@ -1075,7 +1075,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
-  color: #407f9f;
+  color: #5CB7E4;
 }
 
 .team .member .member-info span {
@@ -1162,7 +1162,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #407f9f;
+  background: #5CB7E4;
   display: inline-block;
   padding: 10px 35px;
   border-radius: 50px;
@@ -1170,7 +1170,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: "Gotham Rounded Book", sans-serif;
   transition: 0.3s;
   border: none;
 }
@@ -1433,7 +1433,7 @@ section {
 .breadcrumbs h2 {
   font-size: 28px;
   font-weight: 400;
-  color: #407f9f;
+  color: #5CB7E4;
 }
 
 .breadcrumbs ol {
@@ -1505,14 +1505,14 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Gotham Rounded Book", sans-serif;
   color: #777777;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #407f9f;
+  color: #5CB7E4;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1618,7 +1618,7 @@ section {
   font-size: 18px;
   display: inline-block;
   background: #c3d9e4;
-  color: #407f9f;
+  color: #5CB7E4;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
